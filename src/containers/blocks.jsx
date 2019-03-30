@@ -95,12 +95,10 @@ class Blocks extends React.Component {
             {rtl: this.props.isRtl, toolbox: this.props.toolboxXML}
         );
         this.workspace = this.ScratchBlocks.inject(this.blocks, workspaceConfig);
-
         // Store the xml of the toolbox that is actually rendered.
         // This is used in componentDidUpdate instead of prevProps, because
         // the xml can change while e.g. on the costumes tab.
         this._renderedToolboxXML = this.props.toolboxXML;
-
         // we actually never want the workspace to enable "refresh toolbox" - this basically re-renders the
         // entire toolbox every time we reset the workspace.  We call updateToolbox as a part of
         // componentDidUpdate so the toolbox will still correctly be updated
@@ -284,6 +282,7 @@ class Blocks extends React.Component {
     }
     onWorkspaceMetricsChange () {
         const target = this.props.vm.editingTarget;
+        console.log(this.props.vm);
         if (target && target.id) {
             const workspaceMetrics = Object.assign({}, this.state.workspaceMetrics, {
                 [target.id]: {
