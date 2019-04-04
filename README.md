@@ -2,6 +2,10 @@
 
 ## 项目简介
 
+## 项目文档
+
+- [Scratch-GUI 的 extension 制作方法](https://github.com/LinkXSystem/scratch-gui/blob/develop/doc/extension.md)
+
 ## 目录结构
 
 - components 模块
@@ -35,8 +39,8 @@ components/
 ├── gui
 ├── icon-button
 ├── language-selector
-├── library
-├── library-item
+├── library  # 用于承载 extension 的容器，属于 Modal 层
+├── library-item  # 单独每个 extension
 ├── loader
 ├── loupe
 ├── menu
@@ -134,4 +138,65 @@ containers/
 ├── turbo-mode.jsx
 ├── watermark.jsx
 └── webgl-modal.jsx
+```
+
+- lib 模块
+
+```shell
+lib/
+├── alerts
+├── analytics.js
+├── app-state-hoc.jsx
+├── assets
+├── audio
+├── backpack
+├── backpack-api.js
+├── blocks.js # Scratch-Blockly 的 Block
+├── cloud-manager-hoc.jsx
+├── cloud-provider.js
+├── collect-metadata.js
+├── connected-intl-provider.jsx
+├── data-uri-to-blob.js
+├── default-project
+├── detect-locale.js
+├── download-blob.js
+├── drag-constants.js
+├── drag-utils.js
+├── drop-area-hoc.jsx
+├── empty-assets.js
+├── error-boundary-hoc.jsx
+├── file-uploader.js
+├── font-loader-hoc.jsx
+├── get-costume-url.js
+├── gif-decoder.js
+├── hash-parser-hoc.jsx
+├── import-csv.js
+├── isScratchDesktop.js
+├── layout-constants.js
+├── libraries
+├── locale-utils.js
+├── localization-hoc.jsx
+├── log.js
+├── make-toolbox-xml.js # Scratch-Blockly 的 ToolBox
+├── monitor-adapter.js
+├── opcode-labels.js
+├── project-fetcher-hoc.jsx
+├── project-saver-hoc.jsx
+├── query-parser-hoc.jsx
+├── randomize-sprite-position.js
+├── save-project-to-server.js
+├── screen-utils.js
+├── shared-messages.js
+├── sortable-hoc.jsx
+├── storage.js
+├── supported-browser.js
+├── tablet-full-screen.js
+├── throttled-property-hoc.jsx
+├── titled-hoc.jsx
+├── touch-utils.js
+├── tutorial-from-url.js
+├── variable-utils.js
+├── video
+├── vm-listener-hoc.jsx
+└── vm-manager-hoc.jsx
 ```
