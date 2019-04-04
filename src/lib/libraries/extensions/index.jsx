@@ -38,6 +38,9 @@ import wedo2ConnectionTipIconURL from './wedo2/wedo-button-illustration.svg';
 import boostIconURL from './boost/boost.png';
 import boostInsetIconURL from './boost/boost-small.svg';
 
+import browserIconURL from './browser/browser.svg';
+import browserInsetIconURL from './browser/network.svg';
+
 export default [
     {
         name: (
@@ -248,6 +251,23 @@ export default [
             />
         ),
         helpLink: 'https://scratch.mit.edu/wedo'
+    },
+    {
+        name: 'LinkSystem Connector',
+        extensionId: 'linksystem',
+        extensionURL: './linksystem-extension.js',
+        iconURL: browserIconURL,
+        insetIconURL: browserInsetIconURL,
+        // description: (
+        //     <FormattedMessage
+        //         defaultMessage="Connect the world by Browser"
+        //         description="Connect the world by Browser"
+        //         id="browser"
+        //     />
+        // ),
+        featured: true,
+        // 是否禁用插件
+        disabled: false,
     },
     {
         name: 'LEGO BOOST',
