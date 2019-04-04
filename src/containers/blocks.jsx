@@ -1,9 +1,11 @@
 import bindAll from 'lodash.bindall';
 import debounce from 'lodash.debounce';
 import defaultsDeep from 'lodash.defaultsdeep';
+// Scratch-Blockly 的 ToolBox
 import makeToolboxXML from '../lib/make-toolbox-xml';
 import PropTypes from 'prop-types';
 import React from 'react';
+// Scratch-Blockly 的 Block
 import VMScratchBlocks from '../lib/blocks';
 import VM from 'scratch-vm';
 
